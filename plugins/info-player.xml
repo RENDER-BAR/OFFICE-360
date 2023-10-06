@@ -1,0 +1,96 @@
+<krpano>
+
+	<action name="info_open">
+		<!-- trace('info_open : ', %1, %2); -->
+		if(layer[infoplayer_bg],
+			<!-- error -->
+			debug('infoplayer_open - there is already a info!'-);
+		  ,
+			<!-- step one - add a background layer and fade it in -->
+			addlayer(infoplayer_bg);
+			set(layer[infoplayer_bg].type, container);
+			set(layer[infoplayer_bg].zorder, 999999);
+			set(layer[infoplayer_bg].align, lefttop);
+			set(layer[infoplayer_bg].width, 100%);
+			set(layer[infoplayer_bg].height, 100%);
+			set(layer[infoplayer_bg].bgcolor, 0x000000);
+			set(layer[infoplayer_bg].bgalpha, 0.8);
+			set(layer[infoplayer_bg].bgcapture, true);
+			set(layer[infoplayer_bg].handcursor, false);
+			set(layer[infoplayer_bg].alpha, 0.0);
+			set(layer[infoplayer_bg].onclick, infoplayer_close() );
+			tween(layer[infoplayer_bg].alpha, 1.0, 0.5, default,
+			
+				if(%3, 
+					addlayer(infoImage);	
+					set(layer[infoImage].url,%3);
+					set(layer[infoImage].keep, true);
+					set(layer[infoImage].y, 20);
+					set(layer[infoImage].height, 70%);
+					set(layer[infoImage].width, prop);
+					set(layer[infoImage].align, top);
+					set(layer[infoImage].zorder, 85);		
+					set(layer[infoImage].alpha, 0);
+					set(layer[infoImage].parent, infoplayer_bg);
+					<!-- set(layer[infoImage].onloaded, setArtSize(50);); -->
+					set(layer[infoImage].onclick, infoplayer_close(););
+				);
+
+		
+				<!-- step two - after the fade-in add the youtube player -->
+				addlayer(infoplayer_plugin);
+				set(layer[infoplayer_plugin].parent, infoplayer_bg);
+				set(layer[infoplayer_plugin].align, center);
+				set(layer[infoplayer_plugin].alpha, 0.0);
+
+				
+				
+				set(layer[infoplayer_plugin].width, 60%);
+				set(layer[infoplayer_plugin].autoheight, true);
+			
+				<!-- html5 - embed iframe via the textfield plugin -->			
+
+				set(layer[infoplayer_plugin].html, 
+					[font style="text-align:left; color:#FFFFFF; font-family:Helvetica; font-size:40px;"]%1[/font][br][font style="text-align:left; color:#FFFFFF; font-family:Helvetica; font-size:25px;"]%2[/font]
+				);
+				
+				set(layer[infoplayer_plugin].background, false);
+				set(layer[infoplayer_plugin].padding, 0);
+				set(layer[infoplayer_plugin].url, 'textfield.swf');
+				
+				<!-- BARCELONA [font style="font-family:open_bold; font-size:35px;"]GOTIC [/font] WALKING TOUR -->
+				
+				<!-- set(layer[infoplayer_plugin].css, text-align:center; color:#FFFFFF; font-family:Abel-Regular; font-face:Abel-Regular; font-weight:regular; font-size:25px;); -->
+				set(layer[infoplayer_plugin].onloaded, infoplayer_plugin_ready() );
+				
+				
+				 
+			  );
+		  );
+	</action>
+
+	<action name="infoplayer_plugin_ready">
+		if(layer[infoplayer_plugin],
+			tween(layer[infoplayer_plugin].alpha, 1.0);
+			tween(layer[close_infoplayer_plugin].alpha, 1.0);
+			tween(layer[infoImage].alpha, 1.0);
+			set(autorotate.enabled, false);
+		  );
+	</action>
+
+	<action name="infoplayer_close">
+		set(layer[infoplayer_bg].onclick, null);
+		
+		set(autorotate.enabled, true);
+		
+		tween(layer[infoplayer_plugin].alpha, 0.0, 0.25, default);
+
+		tween(layer[infoplayer_bg].alpha,0.0, 0.50, default,
+			removelayer(infoplayer_bg);
+			removelayer(infoplayer_plugin);
+			removelayer(infoImage);
+			removelayer(close_infoplayer_plugin);
+		  );
+	</action>
+
+</krpano>

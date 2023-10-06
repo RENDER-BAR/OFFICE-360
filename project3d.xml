@@ -1,0 +1,689 @@
+<krpano modelPath="%VIEWER%/assets/model3d/model.obj">
+  <display depthmaprendermode="3dmodel" />
+  <display depthbuffer="true" />
+  <!-- <display depthmaprendermode="depthmap" /> -->
+  <!-- 
+    
+    depthmaprendermode:
+	    - "depthmap" (default)
+            - generates an internal 24bit depthmap image
+            - fastest to load
+            - no "holes", everything is "connected/filled"
+            - not perfectly accurate
+	    - "3dmodel"
+            - uses the 3d model and maps the pano onto it
+            - slower because the 3d model internally needs to get sub-divided into many small triangles
+    -->
+	
+ <layer name="floorplans_container"
+		type="container"
+		bgcolor="0x2D3E50"
+		bgalpha="0.4"
+		alpha="1"
+		width="450"
+		height="1112"
+		bgroundedge="1"
+		align="righttop"
+		keep="true"
+		state="maximized"
+		scalechildren="true"
+		zorder="9997"
+		scale="0.2"
+		scale.mobile="0.2"
+		>
+		<layer name="floorplan_image" type="image"
+
+			url="skin/floorplan.png"
+			align="center"
+			enabled="true"
+			onclick="toggle_floor_plan_size"
+			>
+			<layer name="dot_cam_01" 
+				style="mapspot"
+				x="325"
+				y="1045"
+				onclick= "sceneFound(scene_cam_01, get(skin_settings.loadscene_blend));"
+			/>
+			<layer name="dot_cam_02" 
+				style="mapspot"
+				x="325"
+				y="1015"
+				onclick= "sceneFound(scene_cam_02, get(skin_settings.loadscene_blend));"
+			/>
+			<layer name="dot_cam_03" 
+				style="mapspot"
+				x="325"
+				y="985"
+				onclick= "sceneFound(scene_cam_03, get(skin_settings.loadscene_blend));"
+			/>
+			<layer name="dot_cam_04" 
+				style="mapspot"
+				x="325"
+				y="955"
+				onclick= "sceneFound(scene_cam_04, get(skin_settings.loadscene_blend));"
+			/>
+			<layer name="dot_cam_05" 
+				style="mapspot"
+				x="325"
+				y="925"
+				onclick= "sceneFound(scene_cam_05, get(skin_settings.loadscene_blend));"
+			/>
+			<layer name="dot_cam_06" 
+				style="mapspot"
+				x="325"
+				y="895"
+				onclick= "sceneFound(scene_cam_06, get(skin_settings.loadscene_blend));"
+			/>
+			<layer name="dot_cam_07" 
+				style="mapspot"
+				x="315"
+				y="870"
+				onclick= "sceneFound(scene_cam_07, get(skin_settings.loadscene_blend));"
+			/>
+			<layer name="dot_cam_08" 
+				style="mapspot"
+				x="295"
+				y="865"
+				onclick= "sceneFound(scene_cam_08, get(skin_settings.loadscene_blend));"
+			/>
+			<layer name="dot_cam_09" 
+				style="mapspot"
+				x="270"
+				y="865"
+				onclick= "sceneFound(scene_cam_09, get(skin_settings.loadscene_blend));"
+			/>
+			<layer name="dot_cam_10" 
+				style="mapspot"
+				x="235"
+				y="865"
+				onclick= "sceneFound(scene_cam_10, get(skin_settings.loadscene_blend));"
+			/>
+			<layer name="dot_cam_11" 
+				style="mapspot"
+				x="235"
+				y="835"
+				onclick= "sceneFound(scene_cam_11, get(skin_settings.loadscene_blend));"
+			/>
+			<layer name="dot_cam_12" 
+				style="mapspot"
+				x="235"
+				y="805"
+				onclick= "sceneFound(scene_cam_12, get(skin_settings.loadscene_blend));"
+			/>
+			<layer name="dot_cam_13" 
+				style="mapspot"
+				x="235"
+				y="775"
+				onclick= "sceneFound(scene_cam_13, get(skin_settings.loadscene_blend));"
+			/>
+			<layer name="dot_cam_14" 
+				style="mapspot"
+				x="235"
+				y="745"
+				onclick= "sceneFound(scene_cam_14, get(skin_settings.loadscene_blend));"
+			/>
+			<layer name="dot_cam_15" 
+				style="mapspot"
+				x="235"
+				y="715"
+				onclick= "sceneFound(scene_cam_15, get(skin_settings.loadscene_blend));"
+			/>
+			<layer name="dot_cam_16" 
+				style="mapspot"
+				x="235"
+				y="685"
+				onclick= "sceneFound(scene_cam_16, get(skin_settings.loadscene_blend));"
+			/>
+			<layer name="dot_cam_17" 
+				style="mapspot"
+				x="235"
+				y="655"
+				onclick="sceneFound(scene_cam_17, get(skin_settings.loadscene_blend));"
+			/>
+			<layer name="dot_cam_18" 
+				style="mapspot"
+				x="235"
+				y="625"
+				onclick="sceneFound(scene_cam_18, get(skin_settings.loadscene_blend));"
+			/>
+			<layer name="dot_cam_19" 
+				style="mapspot"
+				x="235"
+				y="595"
+				onclick="sceneFound(scene_cam_19, get(skin_settings.loadscene_blend));"
+			/>
+			<layer name="dot_cam_20" 
+				style="mapspot"
+				x="235"
+				y="565"
+				onclick="sceneFound(scene_cam_20, get(skin_settings.loadscene_blend));"
+			/>
+			<layer name="dot_cam_21" 
+				style="mapspot"
+				x="235"
+				y="535"
+				onclick="sceneFound(scene_cam_21, get(skin_settings.loadscene_blend));"
+			/>
+			<layer name="dot_cam_22" 
+				style="mapspot"
+				x="235"
+				y="505"
+				onclick="sceneFound(scene_cam_22, get(skin_settings.loadscene_blend));"
+			/>
+			<layer name="dot_cam_23" 
+				style="mapspot"
+				x="235"
+				y="475"
+				onclick="sceneFound(scene_cam_23, get(skin_settings.loadscene_blend));"
+			/>
+			<layer name="dot_cam_24"
+				style="mapspot"
+				x="235"
+				y="445"
+				onclick="sceneFound(scene_cam_24, get(skin_settings.loadscene_blend));"
+			/>
+			<layer name="dot_cam_25" 
+				style="mapspot"
+				x="235"
+				y="415"
+				onclick="sceneFound(scene_cam_25, get(skin_settings.loadscene_blend));"
+			/>
+			<layer name="dot_cam_26" 
+				style="mapspot"
+				x="235"
+				y="385"
+				onclick="sceneFound(scene_cam_26, get(skin_settings.loadscene_blend));"
+			/>
+			<layer name="dot_cam_27" 
+				style="mapspot"
+				x="235"
+				y="355"
+				onclick="sceneFound(scene_cam_27, get(skin_settings.loadscene_blend));"
+			/>
+			<layer name="dot_cam_28" 
+				style="mapspot"
+				x="265"
+				y="340"
+				onclick="sceneFound(scene_cam_28, get(skin_settings.loadscene_blend));"
+			/>
+			<layer name="dot_cam_29" 
+				style="mapspot"
+				x="295"
+				y="325"
+				onclick="sceneFound(scene_cam_29, get(skin_settings.loadscene_blend));"
+			/>
+			<layer name="dot_cam_33" 
+				style="mapspot"
+				x="320"
+				y="225"
+				onclick="sceneFound(scene_cam_33, get(skin_settings.loadscene_blend));"
+			/>
+			<layer name="dot_cam_37" 
+				style="mapspot"
+				x="320"
+				y="85"
+				onclick="sceneFound(scene_cam_37, get(skin_settings.loadscene_blend));"
+			/>
+			<layer name="dot_cam_41" 
+				style="mapspot"
+				x="95"
+				y="825"
+				onclick="sceneFound(scene_cam_41, get(skin_settings.loadscene_blend));"
+			/>
+			<layer name="dot_cam_45" 
+				style="mapspot"
+				x="95"
+				y="945"
+				onclick="sceneFound(scene_cam_45, get(skin_settings.loadscene_blend));"
+			/>
+			<layer name="dot_cam_49" 
+				style="mapspot"
+				x="95"
+				y="1045"
+				onclick="sceneFound(scene_cam_49, get(skin_settings.loadscene_blend));"
+			/>
+			
+		</layer>
+		
+		<plugin name="radar"
+			url="plugins/radar.js"
+			align="centr"
+			edge="center"
+			x="0" y="0"
+			scale="0.5"
+			heading="0.0"
+			headingoffset="0"
+			fillcolor="0x12B8EE"
+			fillalpha="0.5"
+			linewidth="1"
+			linecolor="0x12B8EE"
+			linealpha="0.3"
+			invert="false"
+			/>
+	
+		<layer name="activespot" 
+			type="container"
+			width="15"
+			height="15"
+			bgalpha="0.6"
+			bgroundedge="20"
+			bgborder="1 0x93FF89 1"
+			bgcolor="0x098894"
+			bgshadow="0 0 10 3 0x000000 0.05"
+			align="center"
+			edge="center"
+			enabled="true"
+			x="0"
+			y="0"
+			/>
+	</layer>
+	<action name="updateradar">
+		trace(%1);
+		set(layer[activespot].parent, %1);
+		set(layer[radar].parent, %1);
+		tween(layer[radar].heading, %2);
+	</action>
+	<action name="toggle_floor_plan_size">
+	set(state, get(layer[floorplans_container].state));
+		
+		
+		if(get(state) == minimized,
+		
+			<!-- if state is minimized -->
+			if(device.mobile,
+				tween(layer[floorplans_container].scale, 0.2);
+				,
+				tween(layer[floorplans_container].scale, 0.2);
+			);
+			
+			set(layer[floorplans_container].state, maximized);
+			,
+			
+			<!-- if state is maximized -->
+			
+			if(device.mobile,
+				tween(layer[floorplans_container].scale, 0.5);
+				,
+				tween(layer[floorplans_container].scale, 0.5);
+			);
+			
+			set(layer[floorplans_container].state, minimized);
+			
+		);
+	</action>
+	
+		<style name="mapspot"
+		type="container"
+		width="10"
+		height="10"
+		bgalpha="0.05"
+		alpha="0.6"
+		bgroundedge="15"
+		bgborder="1 0x1245ee 1"
+		bgcolor="0xFFFFFF"
+		bgshadow="0 0 10 3 0x000000 0.05"
+		align="lefttop"
+		edge="center"
+		enabled="true"
+		bgcapture="true"
+		/>
+				
+		
+  <!--  PANORAMA POSITIONS  -->
+  <style name="everpano3d_cam_49" ox="-306.180" oy="-170.7" oz="-1607.7" linkedscene="scene_cam_49" />
+  <style name="everpano3d_cam_01" ox="473.850" oy="-170.7" oz="-1557.7" linkedscene="scene_cam_01" />
+  <style name="everpano3d_cam_02" ox="473.850" oy="-170.7" oz="-1457.7" linkedscene="scene_cam_02" />
+  <style name="everpano3d_cam_03" ox="473.850" oy="-170.7" oz="-1357.7" linkedscene="scene_cam_03" />
+  <style name="everpano3d_cam_04" ox="473.850" oy="-170.7" oz="-1257.7" linkedscene="scene_cam_04" />
+  <style name="everpano3d_cam_05" ox="473.850" oy="-170.7" oz="-1157.7" linkedscene="scene_cam_05" />
+  <style name="everpano3d_cam_06" ox="473.850" oy="-170.7" oz="-1057.7" linkedscene="scene_cam_06" />
+  <style name="everpano3d_cam_07" ox="433.850" oy="-170.7" oz="-997.72" linkedscene="scene_cam_07" />
+  <style name="everpano3d_cam_08" ox="373.850" oy="-170.7" oz="-957.72" linkedscene="scene_cam_08" />
+  <style name="everpano3d_cam_09" ox="273.850" oy="-170.7" oz="-957.72" linkedscene="scene_cam_09" />
+  <style name="everpano3d_cam_13" ox="173.850" oy="-170.7" oz="-657.72" linkedscene="scene_cam_13" />
+  <style name="everpano3d_cam_17" ox="173.850" oy="-170.7" oz="-257.72" linkedscene="scene_cam_17" />
+  <style name="everpano3d_cam_21" ox="173.850" oy="-170.7" oz="142.28" linkedscene="scene_cam_21" />
+  <style name="everpano3d_cam_25" ox="173.850" oy="-170.7" oz="542.28" linkedscene="scene_cam_25" />
+  <style name="everpano3d_cam_29" ox="373.850" oy="-185.7" oz="842.28" linkedscene="scene_cam_29" />
+  <style name="everpano3d_cam_33" ox="488.850" oy="-260.7" oz="1242.3" linkedscene="scene_cam_33" />
+  <style name="everpano3d_cam_37" ox="488.850" oy="-260.7" oz="1642.3" linkedscene="scene_cam_37" />
+  <style name="everpano3d_cam_41" ox="-266.180" oy="-170.7" oz="-827.72" linkedscene="scene_cam_41" />
+  <style name="everpano3d_cam_45" ox="-306.180" oy="-170.7" oz="-1207.7" linkedscene="scene_cam_45" />
+  <style name="everpano3d_cam_10" ox="173.850" oy="-170.7" oz="-957.721" linkedscene="scene_cam_10" />
+  <style name="everpano3d_cam_11" ox="173.850" oy="-170.7" oz="-857.72" linkedscene="scene_cam_11" />
+  <style name="everpano3d_cam_12" ox="173.850" oy="-170.7" oz="-757.72" linkedscene="scene_cam_12" />
+  <style name="everpano3d_cam_14" ox="173.850" oy="-170.7" oz="-557.72" linkedscene="scene_cam_14" />
+  <style name="everpano3d_cam_15" ox="173.850" oy="-170.7" oz="-457.72" linkedscene="scene_cam_15" />
+  <style name="everpano3d_cam_16" ox="173.850" oy="-170.7" oz="-357.72" linkedscene="scene_cam_16" />
+  <style name="everpano3d_cam_18" ox="173.850" oy="-170.7" oz="-157.72" linkedscene="scene_cam_18" />
+  <style name="everpano3d_cam_19" ox="173.850" oy="-170.7" oz="-57.716" linkedscene="scene_cam_19" />
+  <style name="everpano3d_cam_20" ox="173.850" oy="-170.7" oz="42.284" linkedscene="scene_cam_20" />
+  <style name="everpano3d_cam_22" ox="173.850" oy="-170.7" oz="242.28" linkedscene="scene_cam_22" />
+  <style name="everpano3d_cam_23" ox="173.850" oy="-170.7" oz="342.28" linkedscene="scene_cam_23" />
+  <style name="everpano3d_cam_24" ox="173.850" oy="-170.7" oz="442.28" linkedscene="scene_cam_24" />
+  <style name="everpano3d_cam_26" ox="173.850" oy="-170.7" oz="642.28" linkedscene="scene_cam_26" />
+  <style name="everpano3d_cam_27" ox="173.850" oy="-170.7" oz="742.28" linkedscene="scene_cam_27" />
+  <style name="everpano3d_cam_28" ox="273.850" oy="-170.7" oz="792.28" linkedscene="scene_cam_28" />
+  <!--  SCENES  -->
+  <!-- model3d -->
+  <scene name="scene_model3d"  type="model3d" onstart="initial_model3d_view()" thumburl="%VIEWER%/assets/model3d/snapshot.jpg" thumbSize="250,130">
+    <view hlookat="0" vlookat="0" fov="120.00"  fovtype="MFOV" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+    <preview url="%VIEWER%/assets/model3d/preview.jpg" />
+    <image ev_x="144.901" ev_y="-1279.241" ev_z="2336.488" hdir="116.223" vdir="61.163" fov="90" >
+      <sphere url="%VIEWER%/assets/model3d/texture.jpg" />
+      <depthmap url="%VIEWER%/assets/model3d/model.obj" rendermode="3dmodel" scale="1" textured="true" cull="front" subdiv="10000" waitforload="true" />
+    </image>
+  </scene>
+  <!--  cam_49  -->
+  <scene name="scene_cam_49" onstart="updateradar(dot_cam_49,0)" type="panorama" menu="true" model="true" title="cam_49" alt="100" thumburl="assets\panos\cam_49.tiles\snapshot.jpg"  >
+    <view hlookat="0" vlookat="0" fov="120.00"  fovtype="MFOV" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+    <preview type="CUBESTRIP" url="%VIEWER%\assets\panos\cam_49.tiles\preview.jpg" />
+    <image style="everpano3D_cam_49">
+      <cube url="%VIEWER%\assets\panos\cam_49.tiles\pano_%s.jpg" />
+      <depthmap  url="%VIEWER%/assets/model3d/model.obj" center="-1607.7,170.700,306.18" subdiv="10000" enabled="true" scale="1.0" />
+    </image>
+  </scene>
+  <!--  cam_01  -->
+  <scene name="scene_cam_01" onstart="updateradar(dot_cam_01,0)" unlinkedscenes="scene_cam_27|scene_cam_28|scene_cam_29|scene_cam_33|scene_cam_37" type="panorama" menu="true" model="true" title="cam_01" alt="100" thumburl="assets\panos\cam_01.tiles\snapshot.jpg" autoload="true" >
+    <view hlookat="0" vlookat="0" fov="120"  fovtype="MFOV" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+    <preview type="CUBESTRIP" url="%VIEWER%\assets\panos\cam_01.tiles\preview.jpg" />
+    <image style="everpano3D_cam_01">
+      <cube url="%VIEWER%\assets\panos\cam_01.tiles\pano_%s.jpg" />
+      <depthmap  url="%VIEWER%/assets/model3d/model.obj" center="-1557.7,170.700,-473.85" subdiv="10000" enabled="true" scale="1.0" />
+    </image>
+  </scene>
+  <!--  cam_02  -->
+  <scene name="scene_cam_02" onstart="updateradar(dot_cam_02,0)" unlinkedscenes="scene_cam_27|scene_cam_28|scene_cam_29|scene_cam_33|scene_cam_37" type="panorama" menu="true" model="true" title="cam_02" alt="100" thumburl="assets\panos\cam_02.tiles\snapshot.jpg"  >
+    <view hlookat="0" vlookat="0" fov="120"  fovtype="MFOV" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+    <preview type="CUBESTRIP" url="%VIEWER%\assets\panos\cam_02.tiles\preview.jpg" />
+    <image style="everpano3D_cam_02">
+      <cube url="%VIEWER%\assets\panos\cam_02.tiles\pano_%s.jpg" />
+      <depthmap  url="%VIEWER%/assets/model3d/model.obj" center="-1457.7,170.700,-473.85" subdiv="10000" enabled="true" scale="1.0" />
+    </image>
+  </scene>
+  <!--  cam_03  -->
+  <scene name="scene_cam_03" onstart="updateradar(dot_cam_03,0)" unlinkedscenes="scene_cam_27|scene_cam_28|scene_cam_29|scene_cam_33|scene_cam_37" type="panorama" menu="true" model="true" title="cam_03" alt="100" thumburl="assets\panos\cam_03.tiles\snapshot.jpg"  >
+    <view hlookat="0" vlookat="0" fov="120"  fovtype="MFOV" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+    <preview type="CUBESTRIP" url="%VIEWER%\assets\panos\cam_03.tiles\preview.jpg" />
+    <image style="everpano3D_cam_03">
+      <cube url="%VIEWER%\assets\panos\cam_03.tiles\pano_%s.jpg" />
+      <depthmap  url="%VIEWER%/assets/model3d/model.obj" center="-1357.7,170.700,-473.85" subdiv="10000" enabled="true" scale="1.0" />
+    </image>
+  </scene>
+  <!--  cam_04  -->
+  <scene name="scene_cam_04" onstart="updateradar(dot_cam_04,0)" unlinkedscenes="scene_cam_27|scene_cam_28|scene_cam_29|scene_cam_33|scene_cam_37" type="panorama" menu="true" model="true" title="cam_04" alt="100" thumburl="assets\panos\cam_04.tiles\snapshot.jpg"  >
+    <view hlookat="0" vlookat="0" fov="120"  fovtype="MFOV" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+    <preview type="CUBESTRIP" url="%VIEWER%\assets\panos\cam_04.tiles\preview.jpg" />
+    <image style="everpano3D_cam_04">
+      <cube url="%VIEWER%\assets\panos\cam_04.tiles\pano_%s.jpg" />
+      <depthmap  url="%VIEWER%/assets/model3d/model.obj" center="-1257.7,170.700,-473.85" subdiv="10000" enabled="true" scale="1.0" />
+    </image>
+  </scene>
+  <!--  cam_05  -->
+  <scene name="scene_cam_05" onstart="updateradar(dot_cam_05,0)" unlinkedscenes="scene_cam_27|scene_cam_28|scene_cam_29|scene_cam_33|scene_cam_37" type="panorama" menu="true" model="true" title="cam_05" alt="100" thumburl="assets\panos\cam_05.tiles\snapshot.jpg"  >
+    <view hlookat="0" vlookat="0" fov="120"  fovtype="MFOV" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+    <preview type="CUBESTRIP" url="%VIEWER%\assets\panos\cam_05.tiles\preview.jpg" />
+    <image style="everpano3D_cam_05">
+      <cube url="%VIEWER%\assets\panos\cam_05.tiles\pano_%s.jpg" />
+      <depthmap  url="%VIEWER%/assets/model3d/model.obj" center="-1157.7,170.700,-473.85" subdiv="10000" enabled="true" scale="1.0" />
+    </image>
+  </scene>
+  <!--  cam_06  -->
+  <scene name="scene_cam_06" onstart="updateradar(dot_cam_06,0)" unlinkedscenes="scene_cam_27|scene_cam_28|scene_cam_29|scene_cam_33|scene_cam_37" type="panorama" menu="true" model="true" title="cam_06" alt="100" thumburl="assets\panos\cam_06.tiles\snapshot.jpg"  >
+    <view hlookat="0" vlookat="0" fov="120"  fovtype="MFOV" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+    <preview type="CUBESTRIP" url="%VIEWER%\assets\panos\cam_06.tiles\preview.jpg" />
+    <image style="everpano3D_cam_06">
+      <cube url="%VIEWER%\assets\panos\cam_06.tiles\pano_%s.jpg" />
+      <depthmap  url="%VIEWER%/assets/model3d/model.obj" center="-1057.7,170.700,-473.85" subdiv="10000" enabled="true" scale="1.0" />
+    </image>
+  </scene>
+  <!--  cam_07  -->
+  <scene name="scene_cam_07" onstart="updateradar(dot_cam_07,0)" unlinkedscenes="scene_cam_11|scene_cam_12|scene_cam_13|scene_cam_14|scene_cam_15|scene_cam_16|scene_cam_17|scene_cam_18|scene_cam_19|scene_cam_20|scene_cam_21|scene_cam_22|scene_cam_23|scene_cam_24|scene_cam_25|scene_cam_26|scene_cam_27|scene_cam_28|scene_cam_29|scene_cam_33|scene_cam_37" type="panorama" menu="true" model="true" title="cam_07" alt="100" thumburl="assets\panos\cam_07.tiles\snapshot.jpg"  >
+    <view hlookat="0" vlookat="0" fov="120"  fovtype="MFOV" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+    <preview type="CUBESTRIP" url="%VIEWER%\assets\panos\cam_07.tiles\preview.jpg" />
+    <image style="everpano3D_cam_07">
+      <cube url="%VIEWER%\assets\panos\cam_07.tiles\pano_%s.jpg" />
+      <depthmap  url="%VIEWER%/assets/model3d/model.obj" center="-997.72,170.700,-433.85" subdiv="10000" enabled="true" scale="1.0" />
+    </image>
+  </scene>
+  <!--  cam_08  -->
+  <scene name="scene_cam_08" onstart="updateradar(dot_cam_08,0)" unlinkedscenes="scene_cam_11|scene_cam_12|scene_cam_13|scene_cam_14|scene_cam_15|scene_cam_16|scene_cam_17|scene_cam_18|scene_cam_19|scene_cam_20|scene_cam_21|scene_cam_22|scene_cam_23|scene_cam_24|scene_cam_25|scene_cam_26|scene_cam_27|scene_cam_28|scene_cam_29|scene_cam_33|scene_cam_37" type="panorama" menu="true" model="true" title="cam_08" alt="100" thumburl="assets\panos\cam_08.tiles\snapshot.jpg"  >
+    <view hlookat="0" vlookat="0" fov="120"  fovtype="MFOV" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+    <preview type="CUBESTRIP" url="%VIEWER%\assets\panos\cam_08.tiles\preview.jpg" />
+    <image style="everpano3D_cam_08">
+      <cube url="%VIEWER%\assets\panos\cam_08.tiles\pano_%s.jpg" />
+      <depthmap  url="%VIEWER%/assets/model3d/model.obj" center="-957.72,170.700,-373.85" subdiv="10000" enabled="true" scale="1.0" />
+    </image>
+  </scene>
+  <!--  cam_09  -->
+  <scene name="scene_cam_09" onstart="updateradar(dot_cam_09,0)" unlinkedscenes="scene_cam_11|scene_cam_12|scene_cam_13|scene_cam_14|scene_cam_15|scene_cam_16|scene_cam_17|scene_cam_18|scene_cam_19|scene_cam_20|scene_cam_21|scene_cam_22|scene_cam_23|scene_cam_24|scene_cam_25|scene_cam_26|scene_cam_27|scene_cam_28|scene_cam_29|scene_cam_33|scene_cam_37" type="panorama" menu="true" model="true" title="cam_09" alt="100" thumburl="assets\panos\cam_09.tiles\snapshot.jpg"  >
+    <view hlookat="0" vlookat="0" fov="120"  fovtype="MFOV" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+    <preview type="CUBESTRIP" url="%VIEWER%\assets\panos\cam_09.tiles\preview.jpg" />
+    <image style="everpano3D_cam_09">
+      <cube url="%VIEWER%\assets\panos\cam_09.tiles\pano_%s.jpg" />
+      <depthmap  url="%VIEWER%/assets/model3d/model.obj" center="-957.72,170.700,-273.85" subdiv="10000" enabled="true" scale="1.0" />
+    </image>
+  </scene>
+  <!--  cam_13  -->
+  <scene name="scene_cam_13" onstart="updateradar(dot_cam_13,0)" linkedscenes="scene_cam_41" unlinkedscenes="scene_cam_27|scene_cam_28|scene_cam_29|scene_cam_33|scene_cam_37" type="panorama" menu="true" model="true" title="cam_13" alt="100" thumburl="assets\panos\cam_13.tiles\snapshot.jpg"  >
+    <view hlookat="0" vlookat="0" fov="120"  fovtype="MFOV" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+    <preview type="CUBESTRIP" url="%VIEWER%\assets\panos\cam_13.tiles\preview.jpg" />
+    <image style="everpano3D_cam_13">
+      <cube url="%VIEWER%\assets\panos\cam_13.tiles\pano_%s.jpg" />
+      <depthmap  url="%VIEWER%/assets/model3d/model.obj" center="-657.72,170.700,-173.85" subdiv="10000" enabled="true" scale="1.0" />
+    </image>
+  </scene>
+  <!--  cam_17  -->
+  <scene name="scene_cam_17" onstart="updateradar(dot_cam_17,0)" unlinkedscenes="scene_cam_27|scene_cam_28|scene_cam_29|scene_cam_33|scene_cam_37" type="panorama" menu="true" model="true" title="cam_17" alt="100" thumburl="assets\panos\cam_17.tiles\snapshot.jpg"  >
+    <view hlookat="0" vlookat="0" fov="120"  fovtype="MFOV" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+    <preview type="CUBESTRIP" url="%VIEWER%\assets\panos\cam_17.tiles\preview.jpg" />
+    <image style="everpano3D_cam_17">
+      <cube url="%VIEWER%\assets\panos\cam_17.tiles\pano_%s.jpg" />
+      <depthmap  url="%VIEWER%/assets/model3d/model.obj" center="-257.72,170.700,-173.85" subdiv="10000" enabled="true" scale="1.0" />
+    </image>
+  </scene>
+  <!--  cam_21  -->
+  <scene name="scene_cam_21" onstart="updateradar(dot_cam_21,0)" unlinkedscenes="scene_cam_27|scene_cam_28|scene_cam_29|scene_cam_33|scene_cam_37" type="panorama" menu="true" model="true" title="cam_21" alt="100" thumburl="assets\panos\cam_21.tiles\snapshot.jpg"  >
+    <view hlookat="0" vlookat="0" fov="120"  fovtype="MFOV" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+    <preview type="CUBESTRIP" url="%VIEWER%\assets\panos\cam_21.tiles\preview.jpg" />
+    <image style="everpano3D_cam_21">
+      <cube url="%VIEWER%\assets\panos\cam_21.tiles\pano_%s.jpg" />
+      <depthmap  url="%VIEWER%/assets/model3d/model.obj" center="142.28,170.700,-173.85" subdiv="10000" enabled="true" scale="1.0" />
+    </image>
+  </scene>
+  <!--  cam_25  -->
+  <scene name="scene_cam_25" onstart="updateradar(dot_cam_25,0)" unlinkedscenes="scene_cam_27|scene_cam_28|scene_cam_29|scene_cam_33|scene_cam_37" type="panorama" menu="true" model="true" title="cam_25" alt="100" thumburl="assets\panos\cam_25.tiles\snapshot.jpg"  >
+    <view hlookat="0" vlookat="0" fov="120"  fovtype="MFOV" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+    <preview type="CUBESTRIP" url="%VIEWER%\assets\panos\cam_25.tiles\preview.jpg" />
+    <image style="everpano3D_cam_25">
+      <cube url="%VIEWER%\assets\panos\cam_25.tiles\pano_%s.jpg" />
+      <depthmap  url="%VIEWER%/assets/model3d/model.obj" center="542.28,170.700,-173.85" subdiv="10000" enabled="true" scale="1.0" />
+    </image>
+  </scene>
+  <!--  cam_29  -->
+  <scene name="scene_cam_29" onstart="updateradar(dot_cam_29,0)" type="panorama" menu="true" model="true" title="cam_29" alt="100" thumburl="assets\panos\cam_29.tiles\snapshot.jpg"  >
+    <view hlookat="0" vlookat="0" fov="120"  fovtype="MFOV" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+    <preview type="CUBESTRIP" url="%VIEWER%\assets\panos\cam_29.tiles\preview.jpg" />
+    <image style="everpano3D_cam_29">
+      <cube url="%VIEWER%\assets\panos\cam_29.tiles\pano_%s.jpg" />
+      <depthmap  url="%VIEWER%/assets/model3d/model.obj" center="842.28,185.700,-373.85" subdiv="10000" enabled="true" scale="1.0" />
+    </image>
+  </scene>
+  <!--  cam_33  -->
+  <scene name="scene_cam_33" onstart="updateradar(dot_cam_33,0)" type="panorama" menu="true" model="true" title="cam_33" alt="100" thumburl="assets\panos\cam_33.tiles\snapshot.jpg"  >
+    <view hlookat="0" vlookat="0" fov="120"  fovtype="MFOV" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+    <preview type="CUBESTRIP" url="%VIEWER%\assets\panos\cam_33.tiles\preview.jpg" />
+    <image style="everpano3D_cam_33">
+      <cube url="%VIEWER%\assets\panos\cam_33.tiles\pano_%s.jpg" />
+      <depthmap  url="%VIEWER%/assets/model3d/model.obj" center="1242.3,260.700,-488.85" subdiv="10000" enabled="true" scale="1.0" />
+    </image>
+  </scene>
+  <!--  cam_37  -->
+  <scene name="scene_cam_37" onstart="updateradar(dot_cam_37,0)" type="panorama" menu="true" model="true" title="cam_37" alt="100" thumburl="assets\panos\cam_37.tiles\snapshot.jpg"  >
+    <view hlookat="0" vlookat="0" fov="120"  fovtype="MFOV" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+    <preview type="CUBESTRIP" url="%VIEWER%\assets\panos\cam_37.tiles\preview.jpg" />
+    <image style="everpano3D_cam_37">
+      <cube url="%VIEWER%\assets\panos\cam_37.tiles\pano_%s.jpg" />
+      <depthmap  url="%VIEWER%/assets/model3d/model.obj" center="1642.3,260.700,-488.85" subdiv="10000" enabled="true" scale="1.0" />
+    </image>
+  </scene>
+  <!--  cam_41  -->
+  <scene name="scene_cam_41" onstart="updateradar(dot_cam_41,0)" type="panorama" menu="true" model="true" title="cam_41" alt="100" thumburl="assets\panos\cam_41.tiles\snapshot.jpg"  >
+    <view hlookat="0" vlookat="0" fov="120"  fovtype="MFOV" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+    <preview type="CUBESTRIP" url="%VIEWER%\assets\panos\cam_41.tiles\preview.jpg" />
+    <image style="everpano3D_cam_41">
+      <cube url="%VIEWER%\assets\panos\cam_41.tiles\pano_%s.jpg" />
+      <depthmap  url="%VIEWER%/assets/model3d/model.obj" center="-827.72,170.700,266.18" subdiv="10000" enabled="true" scale="1.0" />
+    </image>
+  </scene>
+  <!--  cam_45  -->
+  <scene name="scene_cam_45" onstart="updateradar(dot_cam_45,0)" type="panorama" menu="true" model="true" title="cam_45" alt="100" thumburl="assets\panos\cam_45.tiles\snapshot.jpg"  >
+    <view hlookat="0" vlookat="0" fov="120"  fovtype="MFOV" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+    <preview type="CUBESTRIP" url="%VIEWER%\assets\panos\cam_45.tiles\preview.jpg" />
+    <image style="everpano3D_cam_45">
+      <cube url="%VIEWER%\assets\panos\cam_45.tiles\pano_%s.jpg" />
+      <depthmap  url="%VIEWER%/assets/model3d/model.obj" center="-1207.7,170.700,306.18" subdiv="10000" enabled="true" scale="1.0" />
+    </image>
+  </scene>
+  <!--  cam_10  -->
+  <scene name="scene_cam_10" onstart="updateradar(dot_cam_10,0)" unlinkedscenes="scene_cam_27|scene_cam_28|scene_cam_29|scene_cam_33|scene_cam_37" type="panorama" menu="true" model="true" title="cam_10" alt="100" thumburl="assets\panos\cam_10.tiles\snapshot.jpg"  >
+    <view hlookat="0" vlookat="0" fov="120"  fovtype="MFOV" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+    <preview type="CUBESTRIP" url="%VIEWER%\assets\panos\cam_10.tiles\preview.jpg" />
+    <image style="everpano3D_cam_10">
+      <cube url="%VIEWER%\assets\panos\cam_10.tiles\pano_%s.jpg" />
+      <depthmap  url="%VIEWER%/assets/model3d/model.obj" center="-957.721,170.700,-173.85" subdiv="10000" enabled="true" scale="1.0" />
+    </image>
+  </scene>
+  <!--  cam_11  -->
+  <scene name="scene_cam_11" onstart="updateradar(dot_cam_11,0)" unlinkedscenes="scene_cam_27|scene_cam_28|scene_cam_29|scene_cam_33|scene_cam_37" type="panorama" menu="true" model="true" title="cam_11" alt="100" thumburl="assets\panos\cam_11.tiles\snapshot.jpg"  >
+    <view hlookat="0" vlookat="0" fov="120"  fovtype="MFOV" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+    <preview type="CUBESTRIP" url="%VIEWER%\assets\panos\cam_11.tiles\preview.jpg" />
+    <image style="everpano3D_cam_11">
+      <cube url="%VIEWER%\assets\panos\cam_11.tiles\pano_%s.jpg" />
+      <depthmap  url="%VIEWER%/assets/model3d/model.obj" center="-857.72,170.700,-173.85" subdiv="10000" enabled="true" scale="1.0" />
+    </image>
+  </scene>
+  <!--  cam_12  -->
+  <scene name="scene_cam_12" onstart="updateradar(dot_cam_12,0)" unlinkedscenes="scene_cam_27|scene_cam_28|scene_cam_29|scene_cam_33|scene_cam_37" type="panorama" menu="true" model="true" title="cam_12" alt="100" thumburl="assets\panos\cam_12.tiles\snapshot.jpg"  >
+    <view hlookat="0" vlookat="0" fov="120"  fovtype="MFOV" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+    <preview type="CUBESTRIP" url="%VIEWER%\assets\panos\cam_12.tiles\preview.jpg" />
+    <image style="everpano3D_cam_12">
+      <cube url="%VIEWER%\assets\panos\cam_12.tiles\pano_%s.jpg" />
+      <depthmap  url="%VIEWER%/assets/model3d/model.obj" center="-757.72,170.700,-173.85" subdiv="10000" enabled="true" scale="1.0" />
+    </image>
+  </scene>
+  <!--  cam_14  -->
+  <scene name="scene_cam_14" onstart="updateradar(dot_cam_14,0)" unlinkedscenes="scene_cam_27|scene_cam_28|scene_cam_29|scene_cam_33|scene_cam_37" type="panorama" menu="true" model="true" title="cam_14" alt="100" thumburl="assets\panos\cam_14.tiles\snapshot.jpg"  >
+    <view hlookat="0" vlookat="0" fov="120"  fovtype="MFOV" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+    <preview type="CUBESTRIP" url="%VIEWER%\assets\panos\cam_14.tiles\preview.jpg" />
+    <image style="everpano3D_cam_14">
+      <cube url="%VIEWER%\assets\panos\cam_14.tiles\pano_%s.jpg" />
+      <depthmap  url="%VIEWER%/assets/model3d/model.obj" center="-557.72,170.700,-173.85" subdiv="10000" enabled="true" scale="1.0" />
+    </image>
+  </scene>
+  <!--  cam_15  -->
+  <scene name="scene_cam_15" onstart="updateradar(dot_cam_15,0)" unlinkedscenes="scene_cam_27|scene_cam_28|scene_cam_29|scene_cam_33|scene_cam_37" type="panorama" menu="true" model="true" title="cam_15" alt="100" thumburl="assets\panos\cam_15.tiles\snapshot.jpg"  >
+    <view hlookat="0" vlookat="0" fov="120"  fovtype="MFOV" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+    <preview type="CUBESTRIP" url="%VIEWER%\assets\panos\cam_15.tiles\preview.jpg" />
+    <image style="everpano3D_cam_15">
+      <cube url="%VIEWER%\assets\panos\cam_15.tiles\pano_%s.jpg" />
+      <depthmap  url="%VIEWER%/assets/model3d/model.obj" center="-457.72,170.700,-173.85" subdiv="10000" enabled="true" scale="1.0" />
+    </image>
+  </scene>
+  <!--  cam_16  -->
+  <scene name="scene_cam_16" onstart="updateradar(dot_cam_16,0)" unlinkedscenes="scene_cam_27|scene_cam_28|scene_cam_29|scene_cam_33|scene_cam_37" type="panorama" menu="true" model="true" title="cam_16" alt="100" thumburl="assets\panos\cam_16.tiles\snapshot.jpg"  >
+    <view hlookat="0" vlookat="0" fov="120"  fovtype="MFOV" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+    <preview type="CUBESTRIP" url="%VIEWER%\assets\panos\cam_16.tiles\preview.jpg" />
+    <image style="everpano3D_cam_16">
+      <cube url="%VIEWER%\assets\panos\cam_16.tiles\pano_%s.jpg" />
+      <depthmap  url="%VIEWER%/assets/model3d/model.obj" center="-357.72,170.700,-173.85" subdiv="10000" enabled="true" scale="1.0" />
+    </image>
+  </scene>
+  <!--  cam_18  -->
+  <scene name="scene_cam_18" onstart="updateradar(dot_cam_18,0)" unlinkedscenes="scene_cam_27|scene_cam_28|scene_cam_29|scene_cam_33|scene_cam_37" type="panorama" menu="true" model="true" title="cam_18" alt="100" thumburl="assets\panos\cam_18.tiles\snapshot.jpg"  >
+    <view hlookat="0" vlookat="0" fov="120"  fovtype="MFOV" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+    <preview type="CUBESTRIP" url="%VIEWER%\assets\panos\cam_18.tiles\preview.jpg" />
+    <image style="everpano3D_cam_18">
+      <cube url="%VIEWER%\assets\panos\cam_18.tiles\pano_%s.jpg" />
+      <depthmap  url="%VIEWER%/assets/model3d/model.obj" center="-157.72,170.700,-173.85" subdiv="10000" enabled="true" scale="1.0" />
+    </image>
+  </scene>
+  <!--  cam_19  -->
+  <scene name="scene_cam_19" onstart="updateradar(dot_cam_19,0)" unlinkedscenes="scene_cam_27|scene_cam_28|scene_cam_29|scene_cam_33|scene_cam_37" type="panorama" menu="true" model="true" title="cam_19" alt="100" thumburl="assets\panos\cam_19.tiles\snapshot.jpg"  >
+    <view hlookat="0" vlookat="0" fov="120"  fovtype="MFOV" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+    <preview type="CUBESTRIP" url="%VIEWER%\assets\panos\cam_19.tiles\preview.jpg" />
+    <image style="everpano3D_cam_19">
+      <cube url="%VIEWER%\assets\panos\cam_19.tiles\pano_%s.jpg" />
+      <depthmap  url="%VIEWER%/assets/model3d/model.obj" center="-57.716,170.700,-173.85" subdiv="10000" enabled="true" scale="1.0" />
+    </image>
+  </scene>
+  <!--  cam_20  -->
+  <scene name="scene_cam_20" onstart="updateradar(dot_cam_20,0)" unlinkedscenes="scene_cam_27|scene_cam_28|scene_cam_29|scene_cam_33|scene_cam_37" type="panorama" menu="true" model="true" title="cam_20" alt="100" thumburl="assets\panos\cam_20.tiles\snapshot.jpg"  >
+    <view hlookat="0" vlookat="0" fov="120"  fovtype="MFOV" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+    <preview type="CUBESTRIP" url="%VIEWER%\assets\panos\cam_20.tiles\preview.jpg" />
+    <image style="everpano3D_cam_20">
+      <cube url="%VIEWER%\assets\panos\cam_20.tiles\pano_%s.jpg" />
+      <depthmap  url="%VIEWER%/assets/model3d/model.obj" center="42.284,170.700,-173.85" subdiv="10000" enabled="true" scale="1.0" />
+    </image>
+  </scene>
+  <!--  cam_22  -->
+  <scene name="scene_cam_22" onstart="updateradar(dot_cam_22,0)" unlinkedscenes="scene_cam_27|scene_cam_28|scene_cam_29|scene_cam_33|scene_cam_37" type="panorama" menu="true" model="true" title="cam_22" alt="100" thumburl="assets\panos\cam_22.tiles\snapshot.jpg"  >
+    <view hlookat="0" vlookat="0" fov="120"  fovtype="MFOV" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+    <preview type="CUBESTRIP" url="%VIEWER%\assets\panos\cam_22.tiles\preview.jpg" />
+    <image style="everpano3D_cam_22">
+      <cube url="%VIEWER%\assets\panos\cam_22.tiles\pano_%s.jpg" />
+      <depthmap  url="%VIEWER%/assets/model3d/model.obj" center="242.28,170.700,-173.85" subdiv="10000" enabled="true" scale="1.0" />
+    </image>
+  </scene>
+  <!--  cam_23  -->
+  <scene name="scene_cam_23" onstart="updateradar(dot_cam_23,0)" unlinkedscenes="scene_cam_27|scene_cam_28|scene_cam_29|scene_cam_33|scene_cam_37" type="panorama" menu="true" model="true" title="cam_23" alt="100" thumburl="assets\panos\cam_23.tiles\snapshot.jpg"  >
+    <view hlookat="0" vlookat="0" fov="120"  fovtype="MFOV" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+    <preview type="CUBESTRIP" url="%VIEWER%\assets\panos\cam_23.tiles\preview.jpg" />
+    <image style="everpano3D_cam_23">
+      <cube url="%VIEWER%\assets\panos\cam_23.tiles\pano_%s.jpg" />
+      <depthmap  url="%VIEWER%/assets/model3d/model.obj" center="342.28,170.700,-173.85" subdiv="10000" enabled="true" scale="1.0" />
+    </image>
+  </scene>
+  <!--  cam_24  -->
+  <scene name="scene_cam_24" onstart="updateradar(dot_cam_24,0)" unlinkedscenes="scene_cam_27|scene_cam_28|scene_cam_29|scene_cam_33|scene_cam_37" type="panorama" menu="true" model="true" title="cam_24" alt="100" thumburl="assets\panos\cam_24.tiles\snapshot.jpg"  >
+    <view hlookat="0" vlookat="0" fov="120"  fovtype="MFOV" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+    <preview type="CUBESTRIP" url="%VIEWER%\assets\panos\cam_24.tiles\preview.jpg" />
+    <image style="everpano3D_cam_24">
+      <cube url="%VIEWER%\assets\panos\cam_24.tiles\pano_%s.jpg" />
+      <depthmap  url="%VIEWER%/assets/model3d/model.obj" center="442.28,170.700,-173.85" subdiv="10000" enabled="true" scale="1.0" />
+    </image>
+  </scene>
+  <!--  cam_26  -->
+  <scene name="scene_cam_26" onstart="updateradar(dot_cam_26,0)" unlinkedscenes="scene_cam_28|scene_cam_29|scene_cam_33|scene_cam_37" type="panorama" menu="true" model="true" title="cam_26" alt="100" thumburl="assets\panos\cam_26.tiles\snapshot.jpg"  >
+    <view hlookat="0" vlookat="0" fov="120"  fovtype="MFOV" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+    <preview type="CUBESTRIP" url="%VIEWER%\assets\panos\cam_26.tiles\preview.jpg" />
+    <image style="everpano3D_cam_26">
+      <cube url="%VIEWER%\assets\panos\cam_26.tiles\pano_%s.jpg" />
+      <depthmap  url="%VIEWER%/assets/model3d/model.obj" center="642.28,170.700,-173.85" subdiv="10000" enabled="true" scale="1.0" />
+    </image>
+  </scene>
+  <!--  cam_27  -->
+  <scene name="scene_cam_27" onstart="updateradar(dot_cam_27,0)" type="panorama" menu="true" model="true" title="cam_27" alt="100" thumburl="assets\panos\cam_27.tiles\snapshot.jpg"  >
+    <view hlookat="0" vlookat="0" fov="120"  fovtype="MFOV" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+    <preview type="CUBESTRIP" url="%VIEWER%\assets\panos\cam_27.tiles\preview.jpg" />
+    <image style="everpano3D_cam_27">
+      <cube url="%VIEWER%\assets\panos\cam_27.tiles\pano_%s.jpg" />
+      <depthmap  url="%VIEWER%/assets/model3d/model.obj" center="742.28,170.700,-173.85" subdiv="10000" enabled="true" scale="1.0" />
+    </image>
+  </scene>
+  <!--  cam_28  -->
+  <scene name="scene_cam_28" onstart="updateradar(dot_cam_28,0)" type="panorama" menu="true" model="true" title="cam_28" alt="100" thumburl="assets\panos\cam_28.tiles\snapshot.jpg"  >
+    <view hlookat="0" vlookat="0" fov="120"  fovtype="MFOV" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+    <preview type="CUBESTRIP" url="%VIEWER%\assets\panos\cam_28.tiles\preview.jpg" />
+    <image style="everpano3D_cam_28">
+      <cube url="%VIEWER%\assets\panos\cam_28.tiles\pano_%s.jpg" />
+      <depthmap  url="%VIEWER%/assets/model3d/model.obj" center="792.28,170.700,-273.85" subdiv="10000" enabled="true" scale="1.0" />
+    </image>
+  </scene>
+</krpano>
+
+
+
+
+
+
